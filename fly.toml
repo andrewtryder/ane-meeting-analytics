@@ -1,6 +1,7 @@
 # fly.toml file generated for ane-meeting-analytics on 2023-04-12T11:29:59-04:00
 
 app = "ane-meeting-analytics"
+
 kill_timeout = 0
 primary_region = "bos"
 
@@ -11,11 +12,13 @@ primary_region = "bos"
   PORT = "5000"
 
 [[services]]
-  protocol = ""
+  protocol = "tcp"
   internal_port = 5000
 
   [[services.ports]]
     handlers = ["http"]
+    port = "80"
+    
   [services.concurrency]
     type = "connections"
     hard_limit = 25
