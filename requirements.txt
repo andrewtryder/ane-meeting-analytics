@@ -4,3 +4,10 @@ bokeh
 Authlib
 pytz
 flask
+click
+Flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
