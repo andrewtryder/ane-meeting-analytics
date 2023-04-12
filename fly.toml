@@ -1,0 +1,22 @@
+# fly.toml file generated for ane-meeting-analytics on 2023-04-12T11:29:59-04:00
+
+app = "ane-meeting-analytics"
+kill_timeout = 0
+primary_region = "bos"
+
+[build]
+  builder = "paketobuildpacks/builder:base"
+
+[env]
+  PORT = "5000"
+
+[[services]]
+  protocol = ""
+  internal_port = 5000
+
+  [[services.ports]]
+    handlers = ["http"]
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20

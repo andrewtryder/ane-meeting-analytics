@@ -1,0 +1,47 @@
+/* Basic styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the main content area */
+.main {
+    margin: 20px;
+}
+
+/* Style for the list of meeting IDs */
+.meeting-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meeting-list li {
+    margin-bottom: 10px;
+}
+
+.meeting-list li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.meeting-list li a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Style for the meeting stats section */
+.meeting-stats {
+    margin-top: 20px;
+}
