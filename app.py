@@ -10,7 +10,7 @@ meetings = ['meeting1', 'meeting2', 'meeting3']
 # Route to display list of meetings
 @app.route('/')
 def index():
-    meetings = [{'meeting_id': '87270619114', 'date': 'April 2023', 'title': ''},
+    meetings = [{'meeting_id': '87270619114', 'date': 'April 2023', 'title': 'Damon'},
                 {'meeting_id': '85923120072', 'date': 'March 2023', 'title': ''},
                 {'meeting_id': '88189866002', 'date': 'February 2023', 'title': ''},
                 {'meeting_id': '81555879346', 'date': 'January 2023', 'title': ''},
