@@ -30,6 +30,7 @@ def index():
 def meeting_stats(meeting_id):
     #registrants = Zoom.get_meeting_registrants(meeting_id)
     participants = Zoom.get_meeting_attendees(meeting_id)
+    print(participants)
     script, div = ms.process_participants(participants)
     return render_template('meeting_stats.html', meeting_id=meeting_id, plot_script=script, plot_div=div)
 
