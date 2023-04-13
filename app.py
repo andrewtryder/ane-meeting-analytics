@@ -18,10 +18,12 @@ def index():
                 {'meeting_id': '83479774433', 'date': 'November 2022', 'title': ''},
                 {'meeting_id': '81355532493', 'date': 'October 2022', 'title': ''},
                 {'meeting_id': '82792015750', 'date': 'September 2022', 'title': ''},
-                {'meeting_id': '85784277169', 'date': 'August 2022', 'title': ''}
-            
+                {'meeting_id': '85784277169', 'date': 'August 2022', 'title': 'Get Focused and Get Things Done: 6 Principles of Time Management by Jessica Katz'},
+                {'meeting_id': '82588783947', 'date': 'July 2022', 'title': 'FAST: An Innovative Way to Scale by James Shore'},
+                {'meeting_id': '82266617679', 'date': 'June 2022', 'title': 'My Agile Journey by Kevin Ball'},
+                {'meeting_id': '86755669262', 'date': 'May 2022', 'title': 'How GitLab Makes Agile Shine With Developers Spread Across 65+ Countries by Wayne Haber'},
+                {'meeting_id': '82866273790', 'date': 'April 2022', 'title': 'Agile in Machine Learning by Kristina Doing-Harris'}
                 ]
-    print(meetings)
     return render_template('index.html', meetings=meetings)
 
 @app.route('/meeting_stats/<meeting_id>')
