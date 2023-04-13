@@ -22,6 +22,5 @@ def meeting_stats(meeting_id):
         app.logger.error(e)
         return "Error retriving meeting statistics for this meeting."
 
-
 if __name__ == '__main__':
     app.run(debug=True)
