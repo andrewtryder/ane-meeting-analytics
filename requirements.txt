@@ -3,7 +3,6 @@ pandas
 bokeh
 Authlib
 pytz
-flask
 click
 Flask
 gunicorn
