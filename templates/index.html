@@ -6,9 +6,16 @@
 <body>
     <h1>List of Meetings:</h1>
     <ul>
-        {% for meeting in meetings %}
-        <li><a href="{{ url_for('meeting_stats', meeting_id=meeting['meeting_id']) }}">{{ meeting['date'] }} - {{ meeting['title'] }}</a></li>
-
+        {% for meeting in meetings[:2] %}
+        <li>
+            <a href="{{ url_for('meeting_stats', meeting_id=meeting['meeting_id']) }}">{{ meeting['date'] }} - {{ meeting['title'] }}</a>
+            - <a href="{{ url_for('meeting_registrants', meeting_id=meeting['meeting_id']) }}">Registrants</a>
+        </li>
+        {% endfor %}
+        {% for meeting in meetings[2:] %}
+        <li>
+            <a href="{{ url_for('meeting_stats', meeting_id=meeting['meeting_id']) }}">{{ meeting['date'] }} - {{ meeting['title'] }}</a>
+        </li>
         {% endfor %}
     </ul>
 </body>

@@ -66,13 +66,18 @@ class Zoom:
         zoom = Zoom(ZOOM_API_KEY, ZOOM_API_SECRET)
         jwt_token1: bytes = zoom.generate_jwt_token()
         registrants: requests.Response = zoom.fetch_meeting_registrants(meetingid, jwt_token1)
+        # this is the total count
         count = len(registrants.json().get("registrants"))
-
         while token := registrants.json().get("next_page_token"):
             registrants = zoom.fetch_meeting_registrants(meetingid, jwt_token1, token)
             count += len(registrants.json().get("registrants"))
-
-        return count
+        # lets also iterate over the JSON and figure out who is in-person.
+        inperson = 0
+        for i in registrants.json().get("registrants"):
+            for question in i['custom_questions']:
+                if question['title'] == 'Do you plan to be in person or remote?' and question['value'] == "In person":
+                    inperson += 1
+        return count, inperson
 
     def get_meeting_attendees(meetingid):
         zoom = Zoom(ZOOM_API_KEY, ZOOM_API_SECRET)
