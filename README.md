@@ -13,5 +13,7 @@ To use with your own projects, you will need a ZOOM API key and secret. In app.p
 
 Besides this, the ZOOM api credentials need to be set in a local .env file or on fly's platform via secret variables:
 
+```
 flyctl secrets set ZOOM_API_SECRET=
 flyctl secrets set ZOOM_API_KEY=
+```
