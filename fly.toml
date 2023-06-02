@@ -1,6 +1,7 @@
 # fly.toml file generated for ane-meeting-analytics on 2023-04-12T11:29:59-04:00
 
 app = "ane-meeting-analytics"
+primary_region = “bos”
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
