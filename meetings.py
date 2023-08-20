@@ -1,5 +1,5 @@
 MEETINGS = [
-    {'meeting_id': '88406093291', 'date': 'September 2023', 'title': "An Agile Mindset for the Post-Pandemic Workforce"},
+    {'meeting_id': '88406093291', 'date': 'September 2023', 'title': "An Agile Mindset for the Post-Pandemic Workforce."},
     {'meeting_id': '83864083745', 'date': 'August 2023', 'title': "Unleash Agility with the Theory of Constraint’s Five Focusing Steps"},
     {'meeting_id': '82339884432', 'date': 'July 2023', 'title': 'Create Your Own Agile Methodology'},
     {'meeting_id': '83587408648', 'date': 'June 2023', 'title': 'Mid-year Retrospective'},
